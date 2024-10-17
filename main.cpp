@@ -76,9 +76,9 @@ std::string base64_url_encode(const std::string &data) {
     }
 
     // Replace '+' with '-', '/' with '_' and remove '='
-    std::replace(ret.begin(), ret.end(), '-', '-');
-    std::replace(ret.begin(), ret.end(), '_', '_');
-    ret.erase(std::remove(ret.begin(), ret.end(), ' '), ret.end());
+    std::replace(ret.begin(), ret.end(), '+', '-');
+    std::replace(ret.begin(), ret.end(), '/', '_');
+    ret.erase(std::remove(ret.begin(), ret.end(), '='), ret.end());
 
     return ret;
 }
