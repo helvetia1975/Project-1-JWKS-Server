@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${Project-1-JWKS-Server}/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
